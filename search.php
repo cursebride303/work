@@ -18,7 +18,6 @@ while ($row = $results->fetch_assoc()) {
     echo "<h3>".$row['title']."</h3>";
     echo "<p>".$row['body']."</p>";
 }
-
 $dbConnection->closeConnection();
 
 ?>
