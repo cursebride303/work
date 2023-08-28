@@ -15,7 +15,6 @@ function loadPosts() {
         $dbConnection->executeQuery($query);
         $dbConnection->closeConnection();
     }
-
     return count($posts);
 }
 
