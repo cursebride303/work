@@ -6,7 +6,7 @@ class DatabaseConnection {
     private $password = "";
     private $database = "test";
     private $conn;
-
+    
     public function __construct() {
         $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->database);
 
@@ -14,7 +14,6 @@ class DatabaseConnection {
             die("Ошибка соединения: " . $this->conn->connect_error);
         }
     }
-
     public function executeQuery($query) {
         $stmt = $this->conn->prepare($query);
 
