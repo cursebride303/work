@@ -32,7 +32,6 @@ class DatabaseConnection {
         $stmt->close();
         return $result;
     }
-
     public function closeConnection() {
         $this->conn->close();
     }
