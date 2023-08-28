@@ -2,7 +2,6 @@
 
 require_once 'databaseConnection.php';
 
-// Функция для загрузки записей блога
 function loadPosts() {
     $url = 'https://jsonplaceholder.typicode.com/posts';
     $postsData = file_get_contents($url);
@@ -18,7 +17,6 @@ function loadPosts() {
     return count($posts);
 }
 
-// Функция для загрузки комментариев
 function loadComments() {
     $url = 'https://jsonplaceholder.typicode.com/comments';
     $commentsData = file_get_contents($url);
@@ -35,11 +33,9 @@ function loadComments() {
     return count($comments);
 }
 
-// Загрузка записей и комментариев
 $postsCount = loadPosts();
 $commentsCount = loadComments();
 
-// Вывод результата в консоль
 echo "Загружено ".$postsCount." записей и ".$commentsCount." комментариев\n";
 
 ?>
